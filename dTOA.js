@@ -72,7 +72,15 @@ isNaN(false)
 //true
 !!"0"
 //true
-let lm= 3; let bb = 5; let h = 1; let price = lm + bb + h * 3
-console.log(price)
-let g = 400; let a = 380; let f = 350; let price = g + a + f
-console.log(price)
+let lm= 3;
+let bb = 5;
+let h = 1;
+let totalPrice = (lm + bb + h) * 3
+console.log(totalPrice)
+let g = 400 * 6;
+let am = 380 * 4;
+let f = 350 * 10;
+let overallPrice = (g + am + f) * 10
+console.log(overallPrice)
+let username = 'codeup';
+let password = 'notastrongpassword';
