@@ -38,4 +38,3 @@ typeof 'codeup' === 'string'
 //true
 5 % 2 !== 0
 //true
-
