@@ -1,37 +1,45 @@
 console.log("Hello from external JavaScript")
 alert("Welcome to my website!")
 
-let userInput = prompt("What is your favorite color")
-console.log(`My favorite color is ${userInput} too`)
+let userInput = parseInt(prompt("What is your favorite color"));
 
-let littleMermaid= 3;
-let brotherBear = 5;
-let hercules = 1;
-let totalPrice = (littleMermaid + brotherBear + hercules) * 3
-console.log(totalPrice)
+alert(`Great my favorite color is ${userInput} too`)
 
-userInput = prompt("What is (3 + 5 + 1) * 3")
-console.log(`(3 + 5 + 1) * 3 is ${27}`)
-alert("27")
+let rentalMermaid =parseInt(prompt("How many days do you want to rent The Little Mermaid?"));
 
-let google = 400 * 6;
-let amazon = 380 * 4;
-let facebook = 350 * 10;
-let overallPrice = (google + amazon + facebook)
-console.log(overallPrice)
+alert(`You have selected ${rentalMermaid}`);
 
-userInput = prompt("What is 400 * 6")
-console.log(`400 * 6 is ${2400}`)
-alert("2400")
+let brotherBear = parseInt(prompt("How many days do you want to rent Brother Bear?"));
 
-userInput = prompt("What is 300 * 4")
-console.log(`380 * 4 is ${1520}`)
-alert("1520")
+alert(`You have selected ${brotherBear}`);
 
-userInput = prompt("What is 350 * 10")
-console.log(`350 * 10 is ${3500}`)
-alert("3500")
+let hercules = parseInt(prompt("How many days do you want to rent Hercules?"));
 
-userInput = prompt("What is 2400 + 1520 + 3500")
-console.log(`2400 + 1520 + 3500 is ${7420}`)
-alert("7420")
+alert(`You have selected ${hercules}`);
+
+let total = (rentalMermaid + brotherBear + hercules) * 3;
+
+alert(`Your total is: $${total.toFixed(2)}`)
+
+let googlePay = parseInt(prompt("How much does Google pay you per hour?"));
+alert(`Google paid you ${googlePay} per hour`)
+
+let facebookPay = parseInt(prompt("How much does Facebook pay you per hour?"));
+alert(`Facebook paid you ${facebookPay} per hour`)
+
+let amazonPay = parseInt(prompt("How much does Amazon pay you per hour?"));
+alert(`Amazon paid you ${amazonPay} per hour`)
+
+let googleHours = parseInt(prompt("How many hours did you work for Google this week?"));
+alert(`You worked ${googleHours} this week`)
+
+let facebookHours = parseInt(prompt("How many hours did you work for Facebook this week"));
+alert(`You worked ${facebookHours} this week`)
+
+let amazonHours = parseInt(prompt("How many hours did you work for Amazon this week?"));
+alert(`You worked ${amazonHours} this week`)
+
+let totalPay = (googlePay * googleHours) + (facebookPay * facebookHours) + (amazonPay * amazonHours);
+alert(`Your payment for this week totals to: $${totalPay.toFixed(2)}`);
+
+
