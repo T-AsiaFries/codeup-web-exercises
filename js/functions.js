@@ -120,7 +120,7 @@ alert(`You should tip $${calculateTip(tip/=100, totalBill)}`)
  */
 
 function applyDiscount(price,discount){
-    return (price * discount) + price
+    return price - (price * discount)
 }
 
 let price = 80;
