@@ -9,6 +9,10 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
 
+function sayHello(name = `T-Asia`) {
+    return `Hello, ${name}!`;
+}
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -16,6 +20,8 @@
  *
  * console.log 'helloMessage' to check your work
  */
+
+
 
 /**
  * TODO:
