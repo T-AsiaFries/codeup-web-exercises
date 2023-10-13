@@ -13,6 +13,8 @@ function sayHello(name = `T-Asia`) {
     return `Hello, ${name}!`;
 }
 
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -21,6 +23,9 @@ function sayHello(name = `T-Asia`) {
  * console.log 'helloMessage' to check your work
  */
 
+let helloMessage=(`T-Asia Fries`);
+console.log(sayHello(`T-Asia`));
+console.log(helloMessage);
 
 
 /**
@@ -29,6 +34,9 @@ function sayHello(name = `T-Asia`) {
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+
+let myName = "T-Asia"
+console.log(sayHello(`T-Asia`));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -52,6 +60,17 @@ const random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
+function isTwo(num){
+    if (num === 2) {
+        return true;
+    } else {
+        return false;
+    }
+    isTwo(random);
+}
+
+console.log(random);
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -64,12 +83,26 @@ const random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(tip,bill){
+    return tip * bill
+}
+
+console.log(calculateTip(0.20,20));
+
+//Arguments hold value Fries!
+
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+
+let totalBill= parseFloat(prompt(`How much is your bill?`));
+console.log(totalBill);
+let tip= parseFloat(prompt(`How much would you like to tip?`));
+console.log(tip);
+alert(`You should tip $${calculateTip(tip/=100, totalBill)}`)
 
 /**
  * TODO:
@@ -85,3 +118,11 @@ const random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(price,discount){
+    return (price * discount) + price
+}
+
+let price = 80;
+let discount = .1;
+console.log(applyDiscount(price, discount));
