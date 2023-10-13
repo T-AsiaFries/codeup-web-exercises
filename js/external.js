@@ -25,7 +25,7 @@ console.log(`400 * 6 is ${2400}`)
 alert("2400")
 
 userInput = prompt("What is 300 * 4")
-console.log(`300 * 6 is ${1520}`)
+console.log(`380 * 4 is ${1520}`)
 alert("1520")
 
 userInput = prompt("What is 350 * 10")
