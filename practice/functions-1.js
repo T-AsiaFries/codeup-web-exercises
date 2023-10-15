@@ -2,7 +2,17 @@
 // Example x = 32243
 // Expected Output : 34223
 
+// let x = 32243
+// function reverse() {
+//     return
+// }
+// console.log(reverse(x));
 
+const array1 = [32243];
+console.log(`array1`);
+
+const reverse = array1.reverse();
+console.log
 
 // Write a JavaScript function that checks whether a passed string is a palindrome or not?
 // A palindrome is word, phrase, or sequence that reads the same backward as forward, e.g., madam or nurses run.
