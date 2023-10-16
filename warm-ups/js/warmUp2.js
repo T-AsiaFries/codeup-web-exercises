@@ -1,5 +1,4 @@
-const capitalizeFirstLetter = "asia";
-
-let result = capitalizeFirstLetter.charAt(0).toUpperCase() + capitalizeFirstLetter.slice(1)
-
-console.log(result);
+function capitalizeFirstLetter(name){
+    return name.charAt(0).toUpperCase() + name.slice(1)
+}
+console.log(capitalizeFirstLetter("asia"));
