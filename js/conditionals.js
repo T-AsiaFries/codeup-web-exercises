@@ -86,7 +86,7 @@ switch (newColor) {
  * function to show it to the user.
  */
 
-prompt('What is your favorite color?')
+let color =prompt('What is your favorite color?')
 
 
 /* ########################################################################## */
@@ -142,11 +142,10 @@ console.log(calculateTotal(4, 100));
 // Generate a random number between 0 and 6
 const luckyNumber = Math.floor(Math.random() * 6);
 
-parseFloat(prompt('What is your total bill?'));
-calculateTotal(4, 100);
-alert('Your lucky number is 4!')
-alert(`Your price before the discount is $100`)
-alert('Your price after the discount is $50')
+let num1 = prompt('What is your total bill?');
+
+alert(luckyNumber +" " + num1 + " " + calculateTotal(luckyNumber, num1))
+
 
 /**
  * TODO:
@@ -172,19 +171,29 @@ let number = confirm("Do you want to enter a number")
 if (number) {
     prompt('Enter a number please');
 }
-
-
-alert(
-
-function isEven (num){
-    return (num & 1) === 0;
+//
+//
+//
+//
+function isEvenOdd (num) {
+    if (num % 2 === 0) {
+        return num + 'This is a even number'
+    } else {
+    return num + 'This is a odd number'}
 }
 
-console.log(isEven(4));
+// console.log(isEven(4));
 
-function isOdd (num) {
-    return (num & 1) === 1;
+function add100(num) {
+    return 'Number plus 100' + num + 100
 }
 
-console.log(isOdd(3));
+function isPos (num) {
+    if (num > 1) {
+        return num + 'This is a positive number'
+    } else {
+        return num + 'This is a odd number'
+    }
+}
 
+alert(isEvenOdd + " " + add100 + " " + isPos);
