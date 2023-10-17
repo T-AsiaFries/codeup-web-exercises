@@ -23,18 +23,15 @@
  */
 
 let analyzeColor = (color) => {
-    if(color === 'blue') {
+    if (color === 'blue') {
         return ('Blue is my favorite color too');
     } else if (color === 'red') {
         return ('Apples are red')
-    } else if (color === 'green') {
-        return ('My favorite color is green');
-    } else if (color === 'violet') {
-        return ('Violet is beautiful')
     } else {
-        return ("I dont know anything about that color")
+        return `I dont know anything about ${color}`
     }
 }
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -58,26 +55,18 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-let newColor = 'blue';
 
-switch (newColor) {
-    case 'red':
-    case 'yellow':
-    case 'blue':
-        console.log('Is a primary color');
-        break;
-    case 'indigo':
-    case 'violet':
-    case 'orange':
-        console.log('Decent colors');
-        break;
-    case 'green':
-        console.log('My favorite color');
-        break;
-    default:
-        console.log('I dont care for that color')
+// function newColor(color) {
+//     switch (newColor) {
+//         case ("red"):
+//             return "Red is red"
+//         case ("blue"):
+//             return "Is a primary color"
+//         default:
+//             return "I dont care for that color" + color;
+//     }
+// }
 
-}
 
 /**
  * TODO:
@@ -86,8 +75,8 @@ switch (newColor) {
  * function to show it to the user.
  */
 
-let color =prompt('What is your favorite color?')
-
+let color = prompt('What is your favorite color?')
+alert(analyzeColor(color));
 
 /* ########################################################################## */
 
@@ -125,8 +114,11 @@ function calculateTotal(num, total) {
             return total - 0.50 * total
         case 5:
             return 0
+        default:
+            return "Invalid lucky number, please enter a lucky number between 0 and 5"
     }
 }
+
 calculateTotal(4, 100);
 
 console.log(calculateTotal(4, 100));
@@ -140,11 +132,17 @@ console.log(calculateTotal(4, 100));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-const luckyNumber = Math.floor(Math.random() * 6);
-
-let num1 = prompt('What is your total bill?');
-
-alert(luckyNumber +" " + num1 + " " + calculateTotal(luckyNumber, num1))
+// const luckyNumber = Math.floor(Math.random() * 6);
+//
+// let num1 = parseFloat(prompt('What is your total bill?'));
+//
+// //Concatenation
+//
+// alert(" Your lucky number is " + luckyNumber + " Your total before discount " + num1 + " Your total after discount " + calculateTotal(luckyNumber, num1))
+//
+// //Template literals
+//
+// alert(`Your lucky number is: ${luckyNumber}, Your total before discount ${num1} Your total after the discount $${parseFloat(calculateTotal(luckyNumber, num1)).toFixed(2)
 
 
 /**
@@ -166,34 +164,41 @@ alert(luckyNumber +" " + num1 + " " + calculateTotal(luckyNumber, num1))
  * HINT: The way we prompt for a value could be improved
  */
 
-let number = confirm("Do you want to enter a number")
+let userConfirm = confirm("Do you want to enter a number")
 
-if (number) {
-    prompt('Enter a number please');
-}
-//
-//
-//
-//
-function isEvenOdd (num) {
-    if (num % 2 === 0) {
-        return num + 'This is a even number'
+if (userConfirm) {
+    let userInput =parseFloat(prompt('Enter a number please'));
+    if (isNaN(!userInput)) {
+        alert("You didnt input a number");
     } else {
-    return num + 'This is a odd number'}
-}
-
-// console.log(isEven(4));
-
-function add100(num) {
-    return 'Number plus 100' + num + 100
-}
-
-function isPos (num) {
-    if (num > 1) {
-        return num + 'This is a positive number'
-    } else {
-        return num + 'This is a odd number'
+        alert(isEvenOdd(userInput))
+        alert(add100(userInput))
+        alert(isPos(userInput))
     }
 }
 
-alert(isEvenOdd + " " + add100 + " " + isPos);
+//Even or odd function
+function isEvenOdd(num) {
+    if (num === 0) {
+        return num + " " + ' is neither even or odd'
+    } else if (num % 2 === 0) {
+        return num + " " + ' is a even number'
+    } else if (num % 2 === 1) {
+        return num + " " + ' is a odd number'
+    }
+}
+
+//Add 100 function
+function add100(num) {
+    return num + 100
+}
+
+//Is positive function
+function isPos(num) {
+    if (num > 1) {
+        return num + " " + ' is a positive number'
+    } else {
+        return num + " " + ' is a odd number'
+    }
+}
+
