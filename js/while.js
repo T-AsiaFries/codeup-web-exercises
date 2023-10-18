@@ -23,3 +23,4 @@ do {
         console.log(allCones + " all cones are left")
     }
 } while (allCones > 0)
+
