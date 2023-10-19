@@ -23,6 +23,7 @@
 // console.log(largestNum(num1,num2,num3));
 
 // Daily warmup
+// 10.19
 // Declare a variable named 'num' with a value of 100. Using a while loop decrement num by 5 til you reach zero, and console.log("even") for every even number.
 // Example output: (95, 90 even, 85, 80 even, etc.)
 
