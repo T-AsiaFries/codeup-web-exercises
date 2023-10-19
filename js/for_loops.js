@@ -20,10 +20,12 @@ for (let i = 0 ; i < 10; i++) {
 
 // 4.
 
-
+for (let i = 0; i <10; i++) {
+    console.log(i.toString().repeat(i))
+}
 
 // 5.
 
-// for (let i = 5; i < 100; i++) {
-//     console.log(i)
-// }
+for (let i = 100; i > 0; i-=5) {
+    console.log(i)
+}
