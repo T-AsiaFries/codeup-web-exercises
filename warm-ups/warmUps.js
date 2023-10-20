@@ -38,6 +38,12 @@ while(num>=0) {
     }
 }
 
+// Daily warmup
+// 10.20
+// Function that returns even numbers from 1 to 100.
+
+
+
 
 
 
