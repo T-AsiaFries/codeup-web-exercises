@@ -1,4 +1,4 @@
-(function(){
+
     "use strict";
 
     /**
@@ -7,8 +7,9 @@
      * 'names'.
      */
 
-    const names = ['tasia', 'america', 'free', 'unique']
-
+    const names = ['tasia', 'america', 'free', 'unique'];
+    const namesArr = ['tasia', 'america', 'free', 'unique',["test", "test2"]];
+console.log(names);
 
     /**
      * TODO:
@@ -16,15 +17,13 @@
      * array.
      */
 
-    console.log(names.length);
+    console.log(`There are ${names.length} names in the array`);
 
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-
-
 
     console.log(names[0])
     console.log(names[1])
@@ -46,8 +45,19 @@
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(names => console.log(" My friends names are " + names))
+    names.forEach(names => console.log(names))
 
+    // forEach loop ,without arrow function
+
+    // names.forEach(function(name) {
+    //     console.log(name);
+    // })
+
+    // Of loop
+
+    // for (let name of names ) {
+    //     console.log(name)
+    // }
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -79,8 +89,8 @@ function third() {
 third();
 
 function fourth() {
-    console.log(numbers[3]);
+    console.log(numbers.length -1); // (If you dont know what the last index is, otherwise you could put 3 in the brackets)
 }
 fourth();
-})();
+
 

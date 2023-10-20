@@ -42,7 +42,9 @@ while(num>=0) {
 // 10.20
 // Function that returns even numbers from 1 to 100.
 
-
+function isEven(numbers) {
+    return numbers % 2 === 0
+}
 
 
 

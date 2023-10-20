@@ -90,6 +90,8 @@ function multiply(num1, num2){
 
 console.log(multiply(...someNums));
 
+//spread operator separates elements within an array.
+
 // using spread operator in a function to define a variable number of parameters
 
 function add (...args){
@@ -102,6 +104,7 @@ function add (...args){
 
 // passing a various number of arguments of a function
 const randNumArr1 =[55, 1, 58, 66, 65, 92, 6, 87, 71, 48, 36, 96];
+// function call
 console.log(add(...randNumArr1));
 
 const randNumArr2 = [72, 5, 90, 11, 43, 22, 100, 21];
