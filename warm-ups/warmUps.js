@@ -39,8 +39,20 @@ while(num>=0) {
 }
 
 // Daily warmup
-// 10.20
-// Function that returns even numbers from 1 to 100.
+// 10.23
+// Create an array of at least 5 of your favorite movies. Create a for each (or a for of loop) loop to console.log all of your movies in alphabetical order
+
+let movies = ['Saw', 'Wrong Turn', '21 Jump Street', 'Hitman', 'Columbiana']
+
+movies.sort();
+
+//For each loop
+movies.forEach(movies => console.log(movies));
+
+// Will only return an array in alphabetical order
+// for (let i = 0; i < 5; i++) {
+//     console.log(movies.sort());
+// }
 
 
 
