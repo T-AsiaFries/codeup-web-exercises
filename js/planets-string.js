@@ -13,7 +13,7 @@
 
     console.log(planetsString);
 
-    const planetsArray = planetsString.split(',')
+    let planetsArray = planetsString.split('|')
 
     console.log(planetsArray);
 
@@ -31,4 +31,10 @@
      let planets = 'Mercury\nVenus\nEarth\nMars\nJupiter\nSaturn\nUranus\nNeptune'
 
      console.log(planets);
+
+    //  let planets = planetsArray.join(`<br>`);
+    // let planetsString = `<ul> <li>${planetsArray.join(`<li><li>`)}</li><ul>`;
+
+
+
 
