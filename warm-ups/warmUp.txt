@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<p> When it comes to my ideal Web Dev job I honestly have no company in mind currently that I would like to work for. However, I would like for my future job in this field to be remote. I wanted to build and or reconstruct company websites/apps for better user experience, but I do feel like by the time I finish I might have changed my mind. I would like a starting salary of 55,000.</p>
 
 </body>
 </html>
