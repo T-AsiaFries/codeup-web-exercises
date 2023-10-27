@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<p> When it comes to my ideal Web Dev job I honestly have no company in mind currently that I would like to work for. However, I would like for my future job in this field to be remote. I wanted to build and or reconstruct company websites/apps for better user experience, but I do feel like by the time I finish I might have changed my mind. I would like a starting salary of 55,000.</p>
+<p> My goal is to graduate Codeup in March having retained everything I've been taught, and with a better understanding of Web Dev. When it comes to my ideal Web Dev job I honestly have no company in mind currently that I would like to work for. However, I would like for my future job in this field to be remote. I want to build and or reconstruct company websites/apps for better user experience. I would like a starting salary of 50-60,000 and I intend to be settled in my new job doing just that next year April-May. I plan on giving this my all and putting my best foot forward to achieve my goal and also ensuring I have the right people in my corner as well. </p>
+
 
 </body>
 </html>
+
+(Specific, Measurable, Achievable, Relevant & Time-Bound)
+What interest you currently and what jobs can you do in relation to what youre interested in.
