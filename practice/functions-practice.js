@@ -4,39 +4,79 @@
 
 // Make a function named isOdd(number)
 
+function isOdd(num) {
+    return num % 2 === 1;
+}
 
+console.log(isOdd(5))
 
 // Make a function named isEven(number)
 
+function isEven(num) {
+    return num % 2 === 0;
+}
 
+console.log(isEven(8));
 
-// Make a function named identity(input) that returns the input exactly as provided.
+// Make a function named identify(input) that returns the input exactly as provided.
 
+function identify(input) {
+    return input;
+}
 
+console.log(identify(47));
 
 // Make a function named isFive(input)
 
+function isFive(input) {
+    if (input === 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
+console.log(isFive(5));
 
 // Make a function named addFive(input) that adds five to some input.
 
+function addFive(input) {
+    return input + 5;
+}
 
+console.log(addFive(25));
 
 // Make a function named isMultipleOfFive(input)
 
+function isMultipleOfFive(input) {
+    return input % 5 === 0;
+}
 
+console.log(isMultipleOfFive(24));
 
 // Make a function named isThree(input)
 
+function isThree(input) {
+    return input === 3;
+}
 
+console.log(isThree(3));
 
 // Make a function named isMultipleOfThree(input)
 
+function isMultipleOfThree(input) {
+    return input % 3 === 0;
+}
 
+console.log(isMultipleOfThree(30));
 
 // Make a function named isMultipleOfThreeAndFive(input)
 
+function isMultipleOfThreeAndFive(input) {
+    return input % 3 === 0 && input % 5 === 0;
+}
 
+console.log(isMultipleOfThreeAndFive(30));
 
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
 
