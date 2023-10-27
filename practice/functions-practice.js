@@ -131,14 +131,22 @@ console.log(isConsonant());
 
 // Make a function named isCapital(letter)
 
+function isCapital(letter) {
+    return letter.charAt(0).toUpperCase();
+}
 
-
+console.log(isCapital('h'));
 
 // Make a function named isLowerCase(letter)
 
+function isLowerCase(letter) {
+    return letter.charAt(0).toLowerCase();
+}
 
+console.log(isLowerCase('K'));
 
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased letter
+
 
 
 
@@ -148,27 +156,54 @@ console.log(isConsonant());
 
 // Make a function named isZero(number)
 
-
+function isZero(number) {
+    if (number === 0) {
+        return true;
+    }
+}
+console.log(isZero(0));
 
 // Make a function named notZero(input) that returns true if the input is not zero
 
+function notZero(input) {
+    if (input !== 0) {
+        return true;
+    }
+}
 
+console.log(notZero(6));
 
 // Write a function named lowerCase(string)
 
+function lowerCase(string) {
+    return string.toLowerCase();
+}
 
+console.log(lowerCase('FRIES'));
 
 // Write a function named double(n) that returns a number times two
 
+function double(n) {
+    return n * 2;
+}
 
+console.log(double(12));
 
 // Write a function named triple(n) that returns a number times 3
 
+function triple(n) {
+    return n * 3;
+}
 
+console.log(triple(9));
 
 // Write a function named quadruple(n) that returns a number times 4
 
+function quadruple(n) {
+    return n * 4;
+}
 
+console.log(quadruple(8));
 
 // Write a function named half(n) that returns 1/2 of the provided input
 
