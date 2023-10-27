@@ -80,17 +80,32 @@ console.log(isMultipleOfThreeAndFive(30));
 
 // Make a function named isMultipleOf(target, n) which checks if target is evenly divisible by n
 
+function isMultipleOf(target, n) {
+    return target % n === 0;
+}
 
+console.log(isMultipleOf(27,9));
 
 // Make a function named isTrue(boolean)
 
+function isTrue(input) {
+        return true;
+}
 
+console.log(isTrue());
 
 // Make a function named isFalse(boolean)
 
+function isFalse(input) {
+    return false;
+}
 
+console.log(isFalse());
+console.log('hey')
 
 // Make a function named isTruthy(input), remember that values other than true will behave like true
+
+
 
 
 
@@ -98,15 +113,24 @@ console.log(isMultipleOfThreeAndFive(30));
 
 
 
+
 // Make a function named isVowel(letter)
 
+function isVowel(letter) {
+    return true;
+}
 
-
+console.log(isVowel());
 // Make a function named isConsonant(letter)
 
+function isConsonant(letter) {
+    return true;
+}
 
+console.log(isConsonant());
 
 // Make a function named isCapital(letter)
+
 
 
 
