@@ -207,23 +207,43 @@ console.log(quadruple(8));
 
 // Write a function named half(n) that returns 1/2 of the provided input
 
+function half(n) {
+    return n / 2;
+}
 
+console.log(half(60));
 
 // Write a function named subtract(a, b) that returns a minus b
 
+function subtract(a, b) {
+    return a - b;
+}
 
+console.log(subtract(125,50));
 
 // Write a function named multiply(a, b) that returns the product of a times b
 
+function multiply(a, b) {
+    return a * b
+}
 
+console.log(multiply(34,40));
 
 // Write a function named divide(a, b) that returns a divided by b
 
+function divide(a, b) {
+    return a / b;
+}
 
+console.log(divide(56,8));
 
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
 
+function remainder(a, b) {
+    return a / b
+}
 
+console.log(remainder(4,2));
 
 // Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
 
@@ -231,10 +251,19 @@ console.log(quadruple(8));
 
 // Write a function named cube(n) that returns n * n * n
 
+function cube(n) {
+    return n * n * n;
+}
 
+console.log(cube(4));
 
 // Write a function named squareRoot(n) that returns the square root of the input
 
+function squareRoot(n) {
+    return Math.sqrt(n)
+}
+
+console.log(squareRoot(2));
 
 
 // Write a function named cubeRoot(n) that returns the cube root of the input
