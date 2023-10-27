@@ -180,3 +180,5 @@ function capitalizeName(str) {
 //     }
 //     return strArr.join(' ');
 // }
+
+// console.log(`line 23: ${whatever the function is}`)
