@@ -268,9 +268,14 @@ console.log(squareRoot(2));
 
 // Write a function named cubeRoot(n) that returns the cube root of the input
 
+function cubeRoot(n) {
+    return Math. cbrt(n)
+}
 
+console.log(cubeRoot(56));
 
 // Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
+
 
 
 
@@ -296,31 +301,68 @@ console.log(squareRoot(2));
 
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
 
+function areIdentical(input1, input2) {
+    if (input1 === input2) {
+        return input1 && input2;
+    } else {
+        return false;
+    }
+}
+
+console.log(areIdentical('citlali','citlali'));
 
 
 // Make a function named not(input) returns the input with a flipped boolean
 
+function not(input) {
+    return !input;
+}
 
+console.log(not('hello'));
 
 // Make a function named notNot(input) that the negation of the negation of the input.
 
+function notNot(input) {
+    return !!input;
+}
 
+console.log(notNot('hello'));
 
 // Make a function named and(predicate1, predicate2) that returns the logical operation of AND
 
+function and(pred1, pred2) {
+    return pred1 && pred2;
+}
 
+console.log(and('yes', 'no'));
 
 // Make a function named or(predicate1, predicate2) that returns the logical operation of OR
 
+function or(predicate1, predciate2) {
+    return predicate1 || predicate2
+}
 
+console.log(or('maybe', 'guess'));
 
 // Write a function called reverseString(string) that reverses a string
 
+function reverseString(str) {
+    let reverseString = ''
+    for (let i = str.length - 1; i >= 0; i--) {
+        reverseString += str[i];
+    }
+    return reverseString;
+}
 
+console.log(reverseString('america'));
 
 // Make a function named absoluteValue(number) that returns the absolute value of a number.
 
+function absoluteValue(number) {
+    return Math.abs(number);
+}
 
+console.log(absoluteValue(5));
 
 // Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
 
