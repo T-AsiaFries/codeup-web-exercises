@@ -1,0 +1,97 @@
+h1 {
+    color: gold;
+    text-align: center;
+}
+
+/*Calling the element by the ID*/
+#header2 {
+    color: darkblue;
+}
+
+/*Calling the element by the class name*/
+.content {
+    background-color: dimgrey
+}
+
+h1, .content {
+    font-weight: lighter;
+}
+
+.fancy-header {
+    font-family: cursive;
+}
+
+.extra-large {
+    color: red;
+}
+
+/*Descendant Selector*/
+
+/*#container h1 {*/
+/*    color: blue;*/
+/*}*/
+
+/*Direct Child Selector*/
+
+#container>h1 {
+    background: #ABC;
+}
+
+/*Combining Selectors*/
+
+h1.content {
+    color: yellow;
+    text-indent: 50px;
+}
+
+/* unvisited link (:link)*/
+a:link {
+    color: red;
+}
+
+/* visited link (:visited)*/
+a:visited {
+    color: black;
+}
+
+/* mouse hover over link (:hover)*/
+a:hover {
+    color: blue;
+    font-size: 25px
+}
+
+
+/* active selected link*/
+a:active {
+    color: green;
+}
+
+#color {
+    color: #00FF00;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+html {
+    background-image: url("../img/people.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(22,147,22);
+}
+
+ul {
+    list-style: square;
+}
+
+p {
+    border: 5px solid black;
+}
+
+em {
+    border: inherit;
+}
