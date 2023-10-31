@@ -1,0 +1,97 @@
+div {
+    width: 300px;
+    height: 150px;
+    background-color: indianred;
+}
+
+/*width and height controls the
+content itself
+ */
+
+#one {
+    padding: 10px;
+    background-color: #318c7a;
+    border: 5px solid purple;
+    margin-bottom: 10px
+}
+/* borders takes in 3 arguments:
+thickness of the border?
+style-solid or dash?
+what color do you want the border?
+ */
+
+#two {
+    padding: 10px 50px;
+    border: 3px dashed black;
+}
+
+/* if passing 2 values padding it
+ is top & bottom > left & right.
+ */
+
+#three {
+    padding: 5px 30px 40px 15px;
+    border: 2px solid pink;
+    margin: 50px 5px 50px 50px;
+}
+
+/* if you pass 4 values through
+padding it is going clockwise starting
+at the top
+ */
+
+/* First step: give the elements space
+border
+Second step: make the button similar size
+to h1 element > margin
+Third step: make the "click" content of the
+button centered.
+Fourth step: make the background of the button
+green.
+ */
+
+h1 {
+    margin-bottom: 10px;
+    /*padding: 20px;*/
+    border: 5px solid black;
+}
+
+button {
+    padding: 10px 20px;
+    border: 5px solid black;
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+
+/*
+height = height + padding-top + padding-bottom + border-top + border-bottom
+
+width = width + padding-left + padding-right + border-left + border-right
+*/
+
+/*
+-span is an inline block level element
+-divs are containers to group different
+elements.
+*/
+
+.box {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+.box p {
+    font-size: 24px;
+}
+
+.box span {
+    font-size: 18px;
+    margin: 40px;
+    background-color: #AABBCC;
+    padding: 10px;
+}
