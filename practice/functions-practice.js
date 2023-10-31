@@ -240,14 +240,20 @@ console.log(divide(56,8));
 // Write a function named remainder(a, b) that returns the remainder after dividing a by b
 
 function remainder(a, b) {
-    return a / b
+    let remainder = a / b;
+    return remainder;
 }
 
 console.log(remainder(4,2));
 
 // Make a function named modulo(a, b) that returns the returns the remainder after dividing a by b
 
+function modula(a, b) {
+    let sum = a / b;
+    return sum;
+}
 
+console.log(modula(8, 2));
 
 // Write a function named cube(n) that returns n * n * n
 
@@ -273,19 +279,30 @@ function cubeRoot(n) {
 }
 
 console.log(cubeRoot(56));
+console.log("here")
 
 // Write a function named invertSign(number) that returns a negative version of a postive number, a positve version of negative, and false for all else.
 
-
-
+// function invertSign(number) {
+//       -Math.abs(number) --> will make a positive number negative.
+//        Math.abs(number) --> will make a negative number positive
+// }
+//
+// console.log(invertSign());
 
 // Write a function named degreesToRadians(number)
 
-
+function degreesToRadians(number) {
+    let pi = Math.pi;
+    return number * (pi/180);
+}
 
 // Write a function named radiansToDegrees(number)
 
-
+function radiansToDegrees(number) {
+    let pi = Math.pi;
+    return number * (180/pi);
+}
 
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
 
@@ -297,7 +314,11 @@ console.log(cubeRoot(56));
 
 // Make a function named areEqual(input1, input2) that returns if both inputs have the same value
 
+function areEqual(input1, input2) {
+    return input1 === input2;
+}
 
+console.log(areEqual(8, 9));
 
 // Make a function named areIdentical(input1, input2) that returns if both inputs are same value and data type.
 
@@ -435,6 +456,8 @@ function identity(input) {
     return input;
 }
 
+console.log(identity(56));
+
 // Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
 
 
@@ -537,9 +560,6 @@ console.log(square(25));
 
 // Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
 
-function sumOfSquares(a, b) {
-
-}
 
 
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.
