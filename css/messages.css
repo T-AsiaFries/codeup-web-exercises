@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+div {
+    background-color: white;
+    padding: 10px;
+}
+
+.info {
+    background-color: #CDDDFF;
+    color: #7D81C6;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.success {
+    background-color: #CFF3DA;
+    color: #2E7A48;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.warning {
+    background-color: #FCFBC9;
+    color: #97852D;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.error {
+    background-color: #FAD2D6;
+    color: #933247;
+    margin: 10px;
+    border-radius: 7px;
+}
