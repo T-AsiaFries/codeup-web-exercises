@@ -1,12 +1,7 @@
 .fancy-header {
+    text-align: center;
     color: purple; /* single line comment */
     text-decoration: underline;
-}
-
-.fancy-header {
-    margin: 50px auto;
-    width: 500px;
-    padding: 10px;
 }
 
 h1.fancy-header {
@@ -19,25 +14,35 @@ h2 {
     text-decoration: underline;
 }
 
-* {
+
+html {
     background-color: gray;
-}
-
-* {
     background-image: url("https://cdn.shopify.com/s/files/1/0065/4999/5573/files/cosmos_flowers_sky_1024x1024.jpg?v=1660105054");
-    background-size: cover;
+    font-family: cursive;
+    background-size: 100%;
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
 }
 
-ul {
+ol, ul {
     list-style: circle;
 }
 
-* {
-    font-family: cursive;
+table {
+    font-size: 25px;
+    padding: 20px;
+    width: 100%;
 }
 
-table {
-    padding:
+th, td {
+    border: 2px solid darkgray;
+    padding: 12px;
+    text-align: center;
+}
+
+thead {
+    background-color: 333;
+    color: white;
 }
 
 a:link {
@@ -56,3 +61,4 @@ a:hover {
 a:active {
     color: green;
 }
+
