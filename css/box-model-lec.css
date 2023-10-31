@@ -74,7 +74,7 @@ width = width + padding-left + padding-right + border-left + border-right
 /*
 -span is an inline block level element
 -divs are containers to group different
-elements.
+elements. (no semantic meaning)
 */
 
 .box {
