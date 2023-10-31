@@ -374,46 +374,56 @@ console.log(absoluteValue(5));
 
 // Make a function called returnTwo() that returns the number 2 when called
 
-
+function returnTwo(input) {
+    return input === 2;
+}
 
 // Test this function with console.log(returnTwo())
 
-
+console.log(returnTwo(2));
 
 // Make a function called sayHowdy() which console.logs the string “Howdy!”
 
-
+function sayHowdy(str) {
+    return str
+}
 
 // Test this function by directly calling sayHowdy()
 
-
+console.log(sayHowdy("Howdy!"));
 
 
 // Remember this function does not need a defined return value
 
 // Make a function called returnName() that returns the string of your name
 
-
+function returnName(str) {
+    return str
+}
 
 // Test this function with console.log(returnName())
 
-
+console.log(returnName("T-Asia"));
 
 // Make a function called addThree() which takes in a number input and returns the number plus 3.
 
-
+function addThree(num) {
+    return num + 3;
+}
 
 // Test this function with console.log(addThree(5))
 
-
+console.log(addThree(5));
 
 // Make a function called sayString() which returns the string input passed in.
 
-
+function sayString(input) {
+    return input
+}
 
 // Test this function with console.log(sayString('codeup'))
 
-
+console.log(sayString('codeup'));
 
 ///////////////////////////////////////////////////////////////
 
@@ -421,7 +431,9 @@ console.log(absoluteValue(5));
 
 // Write a function called identity(input) that takes in an argument called input and returns that input.
 
-
+function identity(input) {
+    return input;
+}
 
 // Write a function called getRandomNumber(min, max) that returns a random number between min and max values sent to that function call.
 
@@ -429,54 +441,105 @@ console.log(absoluteValue(5));
 
 // Write a function called first(input) that returns the first character in the provided string.
 
+function first(input) {
+    return input.charAt(0);
+}
 
+console.log(first("hello"));
 
 // Write a function called last(input) that returns the last character of a string
 
+function last(input) {
+    return input.charAt(6)
+}
 
+console.log(last("goodbye"));
 
 // Write a function called rest(input) that returns everything but the first character of a string.
 
+function rest(input) {
+    return input.slice(1)
+}
 
+console.log(rest("hello"));
 
 // Write a function called reverse(input) that takes a string and returns it reversed.
 
+function reverse(input) {
+    return input.split('').reverse().join('')
+}
 
+console.log(reverse("time"));
 
 // Write a function called isNumeric(input) that takes an input and returns a boolean if the input is numeric.
 
+function isNumeric(input) {
+    return !isNaN(input);
+}
 
+console.log(isNumeric("5"));
 
 // Write a function called count(input) that takes in a string and returns the number of characters.
 
+function count(str) {
+    return str.length;
+}
 
+console.log(count("sonder"));
 
 // Write a function called add(a, b) that returns the sum of a and b
 
+function add(a, b) {
+    return a + b
+}
 
+console.log(add(7, 6));
 
 // Write a function called subtract(a, b) that return the difference between the two inputs.
 
+function subtract(a, b) {
+    return a - b;
+}
 
+console.log(subtract(50, 32));
 
 // Write multiply(a, b) function that returns the product
 
+function multiply(a, b) {
+    return a * b
+}
 
+console.log(multiply(40, 2));
 
 // Write a divide(numerator, denominator) function that returns a divided by b
 
+function divide(numerator, denominator) {
+    return numerator / denominator;
+}
 
+console.log(divide(56, 8));
 
 // Write a remainder(number, divisor) function that returns the remainder left over when dividing number by the divisor
 
+function remainder(number, divisor) {
+    return number / divisor;
+}
 
+console.log(remainder(60, 10));
 
 // Write the function square(a) that takes in a number and returns the number multiplied by itself.
 
+function square(a) {
+    return a * a;
+}
 
+console.log(square(25));
 
 // Write a function called sumOfSquares(a, b) that uses only your add() function and your square function and not + or * operators
 
+function sumOfSquares(a, b) {
+
+}
 
 
 // Write a function called doMath(operator, a, b) that takes 3 parameters. The first parameter is the name of the math function you want to apply. a and b are the two numbers to run that function on.

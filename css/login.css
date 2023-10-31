@@ -12,7 +12,7 @@ body, html {
 
 form {
     padding: 1em;
-    border: 1em;
+    margin: 1em;
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
 }
@@ -30,7 +30,7 @@ fieldset {
 }
 
 .width-80 {
-    width: 600px;
+    width: 900px;
     margin: 0 auto;
     /* The element with this class should be 80% of the width and it must be centered */
     /* Read how to center elements with margin here: http://learnlayout.com/margin-auto.html*/
@@ -67,6 +67,7 @@ fieldset {
 
 .form-control {
     padding: 4px;
+    /*padding: 4px 0 4px 0;*/
     margin-top: .5em;
     margin-bottom: .5em;
     /* There must be 4px on top of the text and below the text of an input with this class */
