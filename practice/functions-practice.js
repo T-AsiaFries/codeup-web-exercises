@@ -387,7 +387,9 @@ console.log(absoluteValue(5));
 
 // Make a function named rollDice(sides) that takes in an argument containing the number of sides the die should have. Generate a random number between 1 up to and including the number of sides.
 
-
+// function randomNumber(min, max) {
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// }
 
 ///////////////////////////////////////////////////////////////
 
