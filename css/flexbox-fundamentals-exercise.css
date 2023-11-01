@@ -34,11 +34,14 @@ h2, h3 {
     padding: 1em;
     margin: 0 auto;
     /* enter needed declarations here */
-    flex-flow: column;
-    align-content: center;
-    justify-content: space-around;
+    /*flex-flow: column;*/
+    /*align-content: center;*/
+    /*justify-content: space-around;*/
 }
-
+/*
+display: flex;
+flex-direction: column;
+*/
 section {
     /* enter needed declarations here */
     display: flex;
