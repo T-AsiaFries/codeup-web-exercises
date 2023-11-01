@@ -149,3 +149,21 @@ movies.forEach(movies => console.log(movies));
 //
 //     }
 // }
+
+// arrow function of solved problem
+// i goes through developers
+// j goes through frontend
+const knowsJavaScript = (arr) => {
+        let javaScriptDevs = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].languages.frontend.length; j++) {
+                console.log(arr[i].languages.frontend[j])
+                if (arr[i].languages.frontend[j] === "JavaScript") {
+                    javaScriptDevs.push(arr[i].name)
+                }
+            }
+        }
+        return javaScriptDevs;
+}
+
+console.log(knowsJavaScript(developers));
