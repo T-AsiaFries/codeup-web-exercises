@@ -62,38 +62,90 @@ movies.forEach(movies => console.log(movies));
 
 // const cars = ['Infiniti', 'Honda', 'Chevrolet'];
 
-const cars = [
-    {
-        make: "Infiniti",
-        model: "Q60",
-        color: "Gray"
-    },
-    {
-        make: "Honda",
-        model: "Accord",
-        color: "White"
-    },
-    {
-        make: "Chevrolet",
-        model: "Silverado 1500",
-        color: "Black"
-    }
-];
+// const cars = [
+//     {
+//         make: "Infiniti",
+//         model: "Q60",
+//         color: "Gray"
+//     },
+//     {
+//         make: "Honda",
+//         model: "Accord",
+//         color: "White"
+//     },
+//     {
+//         make: "Chevrolet",
+//         model: "Silverado 1500",
+//         color: "Black"
+//     }
+// ];
 
 // For Each loop
-cars.forEach( cars => { console.log(`${cars.make} ${cars.model} ${cars.color}.`)
-});
+// cars.forEach( cars => { console.log(`${cars.make} ${cars.model} ${cars.color}.`)
+// });
 
 // For loop
 
-for (let i = 0; i < 3; i ++) {
-    console.log(cars[i])
-}
+// for (let i = 0; i < 3; i ++) {
+//     console.log(cars[i])
+// }
 
 // For of loop
 
-for(let car of cars){
-    console.log(`Here is an ${car.color} ${car.model} ${car.make}.`)
-}
+// for(let car of cars){
+//     console.log(`Here is an ${car.color} ${car.model} ${car.make}.`)
+// }
 
 
+// Objective: Create a function that takes in an array and returns an array of the names of people who know JavaScript.
+//
+//     Data Structure/Example Input:
+
+    let developers = [
+        {
+            name: "Jonathan",
+            languages: {
+                frontend: ["HTML", "JavaScript", "CSS"],
+                backend: ["Java"]
+            }
+        },
+        {
+            name: "Bonnie",
+            languages: {
+                frontend: ["JavaScript"],
+                backend: []
+            }
+        },
+        {
+            name: "Raj",
+            languages: {
+                frontend: [],
+                backend: ["C#", "Java", "Python"]
+            }
+        },
+        {
+            name: "Carmen",
+            languages: {
+                frontend: ["JavaScript", "HTML", "CSS", "React"],
+                backend: ["C#", "Java", "Python", "TypeScript"]
+            }
+        },
+    ]
+
+
+// function getJavaScriptExperts(names) {
+//     let javaScriptExperts = developers.filter(person => person.knowsJavaScript);
+//     let name = javaScriptExperts.map(person => person.name);
+//     return names;
+// }
+// let javaScriptExperts = getJavaScriptExperts(developers);
+//
+// console.log(javaScriptExperts);
+//
+// remember with arrays you do need to loop through**
+// function getJavaScriptExperts(names) {
+//     let javaDev = [];
+//     for (let i = 0; i < developers.length; i++) {
+//
+//     }
+// }
