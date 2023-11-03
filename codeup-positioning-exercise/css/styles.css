@@ -1,0 +1,137 @@
+/* All your custom styles for this site go here */
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.page-wrapper {
+    background-color: #D9D9D9;
+    /*display: flex;*/
+}
+.container.login {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 45px 25px;
+    width: calc(100% - 40px);
+    max-width: 530px;
+    box-shadow: 0px 0px 104px -40px rgba(0, 0, 0, 0.25);
+    top: 120px;
+    position: absolute;
+    z-index: 11;
+}
+
+.container.login h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+input {
+    min-height: 55px;
+    border: 1px solid #DDDFE1;
+    padding: 0px 10px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #ABAFB3;
+}
+
+label.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label.input-group span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+label.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label.checkbox span {
+    font-size: 13px;
+    color: #ABAFB3;
+}
+
+a.link {
+    font-size: 13px;
+}
+
+button.btn {
+    min-height: 55px;
+    border: none;
+    border-radius: 99px;
+    background-color: #AA04F9;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button.btn.btn-login {
+    align-self: center;
+    flex: 0 1 auto;
+    min-width: 250px;
+}
+
+#wave-t {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+}
+
+#wave-b {
+    position: absolute;
+    bottom: 7px;
+    z-index: 5;
+}
+
+#wavy-1 {
+    position: absolute;
+    top: 6em;
+    left: 1em;
+}
+
+#wavy-2 {
+    position: absolute;
+    top: 18em;
+    right: 1em;
+}
+
+#dots1 {
+    position: absolute;
+    top: 20em;
+    left: 7em;
+}
+
+#dots2 {
+    position: absolute;
+    top: 1em;
+    right: 5em;
+}
+
+/*#times {*/
+/*    !*padding: 4px;*!*/
+/*    !*position: absolute;*!*/
+/*    !*top: 0em;*!*/
+/*    !*right: 0em;*!*/
+/*}*/
+
+#cancel {
+    padding: 2px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: -.5em;
+    right: -.5em;
+}
+
+#register {
+    align-self: center;
+}
