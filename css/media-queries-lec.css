@@ -1,0 +1,24 @@
+@media screen and (min-width: 500px) {
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: dodgerblue;
+    }
+}
+
+/*Will define a range for a screen between 900 and 1200 (this will take precedence over more ambiguous media queries) */
+
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+    main {
+        display:flex;
+        background-color: yellow;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        background-color: forestgreen;
+    }
+}
