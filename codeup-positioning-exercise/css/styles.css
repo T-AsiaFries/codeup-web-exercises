@@ -135,3 +135,7 @@ button.btn.btn-login {
 #register {
     align-self: center;
 }
+
+a {
+    text-decoration: none;
+}
