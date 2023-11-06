@@ -199,14 +199,43 @@ console.log(knowsJavaScript(developers));
     }
 ];
 
-    function changeColors(arrOfElements, bgColor, textColor) {
-        let backgroundColor = bgColor;
-        let color = textColor;
-        for (let i = 0; i < arrOfElements.length; i++) {
-            arrOfElements[i].style.backgroundColor = bgColor;
-            // console.log(arrOfElements);
-            arrOfElements[i].style.color = textColor;
+    // function changeColors(arrOfElements, bgColor, textColor) {
+    //     let backgroundColor = bgColor;
+    //     let color = textColor;
+    //     for (let i = 0; i < arrOfElements.length; i++) {
+    //         arrOfElements[i].style.backgroundColor = bgColor;
+    //         // console.log(arrOfElements);
+    //         arrOfElements[i].style.color = textColor;
+    //     }
+    //     return arrOfElements;
+    // }
+    // console.log(changeColors(elements, "white", "black"))
+
+    for (let i = 1; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log ("FizzBuzz")
+        } else if (i % 5 === 0) {
+            console.log ("Buzz")
+        } else if (i % 3 === 0) {
+            console.log("Fizz")
+        } else {
+            console.log(i);
         }
-        return arrOfElements;
     }
-    console.log(changeColors(elements, "white", "black"))
+
+// function version below
+
+// function fizzBuzz(input) {
+//     for (let i = 0; i < input; i++) {
+//         if (i % 3 === 0) {
+//             return "Fizz"
+//         } else if (i % 5 === 0) {
+//             return "Buzz"
+//         } else if (i % 3 === 0 && i % 5 === 0) {
+//             return "FizzBuzz"
+//         } else {
+//             console.log(i)
+//     }
+// }
+//
+// fizzBuzz(100);
