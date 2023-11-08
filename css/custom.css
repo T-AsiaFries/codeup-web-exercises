@@ -1,0 +1,65 @@
+.jumbotron {
+    background-image: url("/img/pizza.png");
+    height: 346px;
+    background-size: cover;
+    opacity: 1;
+}
+
+.pizza {
+    display: flex;
+    justify-content: center;
+    /*align-self: center;*/
+    /*text-align: center;*/
+    /*align-content: center;*/
+    font-size: 30px;
+    color: black;
+    background: transparent;
+    opacity: 0.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.fa-solid {
+    display: flex;
+    justify-content: flex-end;
+    /*opacity: 5;*/
+}
+
+.pizza {
+    background-color: white;
+    opacity: 60%;
+    z-index: 1000;
+    /*position: absolute;*/
+    top: 6em;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element */
+    width: 150%;
+    text-align: center;
+    position: relative;
+}
+
+.user-icon {
+    width: 20px;
+    height: 20px
+}
+
+.icon {
+    display: flex;
+    width: 10%;
+    justify-content: flex-end;
+}
+
+.sign-up {
+    display: flex;
+
+}
+
+.bg-primary {
+    display: flex;
+    align-items: center;
+    color: white;
+}
