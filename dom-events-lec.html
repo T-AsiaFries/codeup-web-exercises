@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attributes and CSS</title>
+    <style>
+        .border {
+            border: 1px solid black;
+            border-radius: 7px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .sans-serif {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+        }
+        .background-color  {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+<header class="border text-center sans-serif">
+    <h1>Attributes and CSS in JS</h1>
+</header>
+<p id="text">Hello World!</p>
+<script>
+    <!--    Using innerHTML-->
+    const header = document.querySelector("header");
+    console.log(header.innerHTML);
+    header.innerHTML = "<h1 id='h1'>The uses of InnerHTML!</h1>" +
+        "<p>You can get and set HTML with innerHTML</p>";
+
+    // Using innerText
+    document.querySelector("h1").innerText = "I control the inner text";
+
+
+    console.log(header.hasAttribute("id"));
+    const isThereH1 = document.getElementsByTagName('h1');
+    console.log(isThereH1[0].hasAttribute('id'));
+    header.setAttribute("id", "pageHeader");
+    console.log(header.getAttribute("id"));
+
+    // Calling the class list
+    console.log(header.classList);
+
+    // Adding a background-color
+    header.classList.add("background-color");
+
+    //  Removing sans-serif font-family
+    header.classList.remove("sans-serif")
+
+    // Toggling the background-color on and off
+    header.classList.toggle("background-color");
+
+    let textElement = document.getElementById('text');
+    // Change the color of the text
+    textElement.style.color = "red"
+
+    // Add a background color
+    textElement.style.backgroundColor = "black";
+
+    // Change the font-size
+    textElement.style.fontSize = "20px";
+</script>
+</body>
+</html>
