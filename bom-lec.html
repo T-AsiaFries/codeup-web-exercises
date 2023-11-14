@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+
+  </style>
+</head>
+<body>
+
+<script>
+
+<!--  THE WINDOW OBJECT IS GLOBALLY SCOPED SO YOU DO NOT HAVE TO REFERENCE IT BUT YOU CAN-->
+  // ALLOWS JS TO INTERACT WITH THE WEB BROWSER
+
+  console.log(window.innerHeight)
+  console.log(window.innerWidth)
+  // OR
+  // console.log(innerWidth)
+  // console.log(innerHeight)
+
+  window.confirm("Would you like to continue?")
+  // OR
+  // confirm("Would you like to continue?")
+
+
+'use strict';
+
+// SET INTERVAL ()
+
+// this code will produce a console log every second
+// when count >= max, the interval is cancelled, and the logging will stop
+
+let count = 0;
+let max = 10;
+let interval = 1000; // interval time in milliseconds
+
+// ARROW FUNCTION
+
+// const intervalId = setInterval( () => {
+//     if (count >= max) {
+//         clearInterval(intervalId);
+//         console.log('All done');
+//     } else {
+//         count++;
+//         console.log('Repeating this line ' + count);
+//     }
+// }, interval);
+
+// REGULAR FUNCTION
+
+let intervalID = setInterval(function () {
+    if (count >= max) {
+        clearInterval(intervalId);
+        console.log('All done');
+        // RELOAD - RELOADS YOUR WEBPAGE
+        location.reload();
+    } else {
+        count++;
+        console.log('Repeating this line ' + count);
+    }
+}, 1000);
+
+// SET TIMEOUT ()
+
+// ARROW FUNCTION
+
+const delay = 5000; // delay time in milliseconds
+//
+// const timeoutId = setTimeout(() => alert('Here is a delayed hello!'), delay);
+
+// to cancel the timeout, you can call
+// clearTimeout(timeoutId);
+// prior to the delay expiring
+
+// REGULAR FUNCTION
+
+let timeoutId = setTimeout(function () {
+    alert('Here is a delayed hello!')
+    // SETTING A LOCATION OF THE WEBPAGE
+    location = 'https://codeup-curriculum.web.app/curriculum/java/3.0.1/javascript-2/bom'
+}, delay)
+
+// clearTimeout(timeoutId)
+// CAN BE PUT INSIDE YOUR FUNCTION WITH AN IF STATEMENT
+
+</script>
+
+</body>
+</html>
