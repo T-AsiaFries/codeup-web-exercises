@@ -3,93 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--Bootstrap CDN-->
+    <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!--Icons-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!--Font Awesome Icons-->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .row {
+            list-style: none;
+        }
+
+        .left-column {
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
 <div class="container mx-auto">
-    <!--H1 element-->
+    <!-- H1 element -->
     <h1 class="col-sm-12 text-center">Mason Reid</h1>
-    <!--H2 element-->
+    <!-- H2 element -->
     <h2 class="col-sm-12 text-center">Software Developer</h2>
-    <!--P tag-->
+    <!-- P tag -->
     <p class="col-sm-12 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur culpa
         dignissimos dolore dolorem esse explicabo facilis laboriosam magni maxime minima nesciunt odit, placeat quam
         quod reiciendis reprehenderit tempora tenetur vitae.</p>
-    <!--First container-->
-    <div class="container">
-        <div class="row text-center" style="list-style: none">
-            <p class="col-md-3">&#x1F4DE; 757-888-2222</p>
-            <p class="col-md-3"><span class="glyphicon glyphicon-envelope">mason@codeup.com</p>
-            <p class="col-md-3"><img src="img/linkedin.svg" alt="linkedin" width="13px"> @mason-reid</p>
-            <p class="col-md-3"><i class="fa fa-github"></i> @mason-m-reid</p>
-        </div>
+    <!-- Contact Information -->
+    <div class="row text-center" style="list-style: none; margin-bottom: 20px;">
+        <p class="col-md-3">&#x1F4DE; 757-888-2222</p>
+        <p class="col-md-3"><span class="glyphicon glyphicon-envelope"></span> mason@codeup.com</p>
+        <p class="col-md-3"><img src="img/linkedin.svg" alt="linkedin" width="13px"> @mason-reid</p>
+        <p class="col-md-3"><i class="fa fa-github"></i> @mason-m-reid</p>
     </div>
-    <!--Line break-->
+    <!-- Line break -->
     <hr style="border-color: darkgreen; border-width: 5px; margin: 20px 0; opacity: 100%">
-    <br>
     <div class="row">
-        <h2 style="color: #4F82FB">SKILLS AND ABILITIES</h2>
-        <ul class="row">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Javascript</li>
-            <li>Bootstrap</li>
-        </ul>
-    </div>
-    <h2 style="color: #4F82FB">ACADEMIC</h2>
-    <div class="container">
-        <div class="row">
-                <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ad amet assumenda autem cumque cupiditate doloremque dolores eum, harum impedit ipsa laborum maxime,
-                    quis, quisquam quos sint soluta temporibus ullam voluptatem!
-                </p>
+        <!-- Left Column -->
+        <div class="col-md-4 left-column">
+            <h2 style="color: #4F82FB">SKILLS AND ABILITIES</h2>
+            <ul class="row">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+            </ul>
+            <h2 style="color: #4F82FB">ACADEMIC</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet assumenda autem cumque cupiditate
+                doloremque dolores eum, harum impedit ipsa laborum maxime, quis, quisquam quos sint soluta temporibus
+                ullam voluptatem!</p>
+            <h2 style="color: #4F82FB">PROFESSIONAL EXPERIENCE</h2>
+            <p class="col-sm-12">Job 2</p>
+            <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda,
+                doloremque dolores earum error excepturi, laboriosam laborum nam nisi nulla quidem temporibus voluptatem!
+                Cupiditate dolor dolores labore nobis repellendus vitae?</p>
+            <p class="col-sm-12">Job 1</p>
+            <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem corporis culpa
+                deserunt et eum, ipsum iure iusto minima necessitatibus nobis, praesentium reiciendis sequi soluta,
+                suscipit tempora verita</p>
+        </div>
+        <!-- Right Column -->
+        <div class="col-md-8">
+            <h2 style="color: #4F82FB">DEVELOPMENT PROJECTS</h2>
+            <p>Project 3</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur doloribus ex id in
+                libero molestiae obcaecati quis quo sapiente? Deleniti eius eos et explicabo hic inventore maiores porro
+                ut?</p>
+            <p>Project 2</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, est voluptatibus. A aliquam beatae,
+                consectetur corporis deleniti esse facere incidunt labore mollitia nemo numquam quibusdam quos
+                similique sint sunt veniam.</p>
+            <p>Project 1</p>
+            <h2 style="color: #4F82FB">AWARDS AND INVOLVEMENT</h2>
+            <p>AWARD 1</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aspernatur itaque iusto nam officiis sed
+                tempore voluptatem. Asperiores aspernatur, at debitis impedit in magnam optio quasi quo vitae
+                voluptatibus!</p>
+            <p>INVOLVEMENT 1</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet autem beatae corporis culpa
+                cum dolorem dolorum ea explicabo, id illum nam nemo placeat possimus provident, quas quibusdam sequi
+                vero.</p>
         </div>
     </div>
-    <h2 style="color: #4F82FB">PROFESSIONAL EXPERIENCE</h2>
-    <div class="container">
-        <div class="row">
-                <p class="col-sm-12">Job 2</p>
-                <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Architecto assumenda, doloremque dolores earum error excepturi, laboriosam laborum nam nisi nulla
-                    quidem temporibus voluptatem! Cupiditate dolor dolores labore nobis repellendus vitae?
-                </p>
-                <p class="col-sm-12">Job 1</p>
-                <p class="col-sm-12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Accusamus autem corporis culpa deserunt et eum, ipsum iure iusto minima necessitatibus nobis,
-                    praesentium reiciendis sequi soluta, suscipit tempora verita
-        </div>
-    </div>
-
-<!--    -->
-<div class="col-md-8">
-
-    <h2 style="color: #4F82FB">DEVELOPMENT PROJECTS</h2>
-    <p>Project 3</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur doloribus ex id in libero
-        molestiae obcaecati quis quo sapiente? Deleniti eius eos et explicabo hic inventore maiores porro ut?</p>
-    <p>Project 2</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, est voluptatibus. A aliquam beatae,
-        consectetur corporis deleniti esse facere incidunt labore mollitia nemo numquam quibusdam quos similique sint
-        sunt veniam.</p>
-    <p>Project 1</p>
-    <h2 style="color: #4F82FB">AWARDS AND INVOLVEMENT</h2>
-    <p>AWARD 1</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A amet aspernatur itaque iusto nam officiis sed tempore
-        voluptatem. Asperiores aspernatur, at debitis impedit in magnam optio quasi quo vitae voluptatibus!</p>
-    <p>INVOLVEMENT 1</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet autem beatae corporis culpa cum
-        dolorem dolorum ea explicabo, id illum nam nemo placeat possimus provident, quas quibusdam sequi vero.</p>
 </div>
-
-
-</div>
-<!--Bootstrap Script Tag-->
+<!-- Bootstrap Script Tag -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
