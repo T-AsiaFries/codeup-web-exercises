@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Events</title>
+</head>
+<body>
+<h1 id="codeup">Hello Codeup</h1>
+<button id="btn1">Click Me!</button>
+<button id="btn2">Remove Event Listener</button>
+
+<form>
+    <label for="textField">Type something:</label><br>
+    <input type="text" id="textField" name="textField" placeholder="Type Here">
+</form>
+<script>
+    'use strict';
+
+    // obtain a reference to the target element
+    // const button1 = document.getElementById("btn1");
+    //
+    // // create a handler function
+    const listener = () => alert('You clicked the button!');
+
+    // register the listener to handle clicks on btn1
+    // button1.addEventListener('click', listener);
+
+    // obtain reference to button two
+    const button2 = document.getElementById('btn2');
+
+    // create a function that removes the event listener from button 1
+    const remover = () => {
+        button1.removeEventListener('click', listener);
+        alert('Event listener removed.');
+    }
+
+    // register an event listener on button two
+    button2.addEventListener('click', remover);
+
+    const button1 = document.getElementById("btn1");
+    const listenerE = (event) => {
+        console.log('You clicked the button!');
+        console.log(event)
+        console.log(event.target.innerText);
+    }
+    button1.addEventListener('click', listenerE);
+    //     Mouse Events
+    // document.querySelector('#codeup').addEventListener("click", () => alert('h1 with id "codeup" was clicked') );
+    //
+    // document.querySelector('#codeup').addEventListener('dblclick', () => alert('h1 with the id of "codeup" was double clicked!'));
+    //
+    // document.querySelector( '#codeup' ).addEventListener('mouseleave', function() {
+    //     console.log("leaving " + this);
+    // });
+    //
+    // document.querySelector( '#codeup' ).addEventListener('mouseenter', function() {
+    //     console.log("entering " + this);
+    // });
+
+    // Key Events
+    //     document.querySelector('#textField').addEventListener('keydown', () => alert('A key was pushed down!') );
+
+    // document.querySelector('#textField').addEventListener('keyup', () => alert('A key was released!') );
+
+    const myKeyPressFunction = event => console.log(`key pressed: ${event.key}`);
+    document.querySelector("#textField").addEventListener('keypress', myKeyPressFunction);
+
+</script>
+</body>
+</html>
