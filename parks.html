@@ -7,12 +7,11 @@
         .highlight {
             background-color: yellow;
         }
+
         .bold {
             font-weight: bold;
         }
-        .blue {
-            color: blue;
-        }
+
     </style>
 </head>
 <body>
@@ -22,14 +21,15 @@
     <div id="acadia-national-park-div">
         <h3 id="acadia-national-park-heading">Acadia National Park</h3>
         <ul class="park">
-            <li>In 1919, Acadia became the first national park established east of the Mississippi River.</li>
+            <li class="first">In 1919, Acadia became the first national park established east of the Mississippi River.</li>
             <li>There are more than 130 miles of hiking trails to explore by foot and 45 miles of carriage roads to
                 travel by bike.
             </li>
             <li>Acadia National Park has a variety of landscapes including granite-domed mountains, woodlands, lakes,
                 ponds, and ocean shoreline.
             </li>
-            <li class="last">More than two dozen mountains rise above the rocky shore, including Cadillac Mountain, which at 1,530
+            <li class="last">More than two dozen mountains rise above the rocky shore, including Cadillac Mountain,
+                which at 1,530
                 feet is the highest point on the U.S. Atlantic coast.
             </li>
         </ul>
@@ -37,7 +37,7 @@
     <div id="adams-national-historical-park-div">
         <h3 id="adams-national-historical-park-heading">Adams National Historical Park</h3>
         <ul class="park">
-            <li>Adams National Historical Park is located in the City of Quincy, Norfolk County, Massachusetts,
+            <li class="first">Adams National Historical Park is located in the City of Quincy, Norfolk County, Massachusetts,
                 approximately ten miles south of Boston.
             </li>
             <li>The Park comprises 11 historic structures and a cultural landscape totaling almost 14 acres.</li>
@@ -45,13 +45,14 @@
                 and First Ladies, three U.S. Ministers, historians, writers and family members who supported and
                 contributed to the success of these public figures.
             </li>
-            <li class="last">There is an off-site visitor center located within one mile of the historic structures.</li>
+            <li class="last">There is an off-site visitor center located within one mile of the historic structures.
+            </li>
         </ul>
     </div>
     <div id="american-memorial-park-div">
         <h3 id="american-memorial-park-heading">American Memorial Park</h3>
         <ul class="park">
-            <li>American Memorial Park honors the American and Marianas people who gave their lives during the Marianas
+            <li class="first">American Memorial Park honors the American and Marianas people who gave their lives during the Marianas
                 Campaign of World War II.
             </li>
             <li>Over 5,000 names are inscribed on a memorial which was dedicated June 15, 1994, during the 50th
@@ -60,7 +61,8 @@
             <li>The Memorial rests at the park's Court of Honor and Flag Circle, where the U.S. flag proudly flies 24
                 hours a day, surrounded by the flags of the U.S. Army, Marine Corps, Navy, and Coast Guard.
             </li>
-            <li class="last">Within the 133-acre boundary are beaches, sports fields, picnic sites, boat marinas, playgrounds,
+            <li class="last">Within the 133-acre boundary are beaches, sports fields, picnic sites, boat marinas,
+                playgrounds,
                 walkways, and a 30-acre wetland and mangrove forest.
             </li>
         </ul>
@@ -89,19 +91,30 @@
     });
 
 
-    function clickH3 (event) {
+    function clickH3(event) {
         const ul = event.target.nextElementSibling;
         if (ul) {
             ul.querySelectorAll('li').forEach(function (li) {
                 li.style.fontWeight = 'bold';
             });
         }
-        if (ul) {
-            ul.firstElementChild.forEach(function (li) {
-                li.style.color = 'blue';
-            })
-        }
+        // if (ul) {
+        //     ul.firstElementChild.style.color = 'blue';
+        //         console.log('h3 has been clicked')
+        //
+        // }
     }
+
+
+    function firstLi() {
+        const ul = this.parentElement.firstElementChild;
+            ul.style.color = 'blue';
+        console.log(ul)
+    }
+
+    document.querySelectorAll('li').forEach(function (li) {
+        li.addEventListener('click', firstLi);
+    });
 
 
 </script>
