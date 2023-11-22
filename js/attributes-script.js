@@ -12,16 +12,16 @@ setTimeout(function () {
 setTimeout(function () {
     const profileName = document.getElementById('profile-name');
     if (profileName) {
-        profileName.innerHTML = 'Madrid Williams'
+        profileName.innerHTML = 'Free Fries'
     }
-},4000);
+}, 4000);
 
 // Six seconds after page loads, add a new class to "profile-desc" that changes the color and font of the description text.
 
 setTimeout(function () {
     const profileDesc = document.getElementById('profile-desc');
     if (profileDesc) {
-        profileDesc.style.color = "green"
+        profileDesc.style.color = "white"
         profileDesc.style.fontFamily = "sans-serif"
     }
 }, 6000)
@@ -33,16 +33,14 @@ let profileCard = document.getElementById('profile-card');
 
 
 setInterval(function () {
-    profileCard.classList.toggle('card')
-    if (profileCard.hasAttribute('card')) {
-        profileCard.setAttribute("style", "background-color: green")
-
+    profileCard.classList.toggle('card');
+    if (profileCard.classList.contains('card')) {
+        profileCard.style.backgroundColor = "green";
+    } else {
+        profileCard.style.backgroundColor = "";
     }
-},2000)
+}, 2000);
 
-console.log(profileCard.hasAttribute('background-color'));
-profileCard.setAttribute("style", "background-color: green")
-profileCard.classList.toggle('background-color')
-console.log(profileCard.hasAttribute('background-color'))
+
 
 
