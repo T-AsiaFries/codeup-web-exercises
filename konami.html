@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konami Code</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Black+Ops+One&family=Merienda&family=Oswald&display=swap"
+          rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .header {
+            color: white;
+            z-index: 1;
+            font-weight: bold;
+            font-size: 120px;
+            font-family: 'black ops one';
+            opacity: 0.5;
+            display: flex;
+            justify-content: start;
+        }
+
+        .fightBtn {
+            width: 20%;
+            height: 75px;
+            font-size: 79px;
+            color: #C03D0A;
+            margin-left: 20px;
+            background-color: rgba(255, 255, 255, 0) !important;
+            font-family: 'black ops one';
+            display: flex;
+            align-items: center;
+            border: 0;
+            animation: bounce .3s infinite alternate;
+        }
+        @keyframes bounce {
+            to { transform: scale(1.2); }
+        }
+        .fightBtn:hover {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <h1 class="header">MORTAL KOMBAT</h1>
+
+    <video class="autoplay" id="mortalKombatVideo">
+        <source src="mortalKombat.mp4" type="video/mp4">
+    </video>
+
+    <audio id="fatality preload" src="fatality.mp3" type="audio/mp3"></audio>
+
+    <button class="fightBtn" type="submit">FIGHT</button>
+</div>
+
+
+<script>
+    "use strict";
+
+    // document.addEventListener("keyup", event => console.log(event.key) );
+
+    const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    let konamiCodeIndex = 0;
+
+    function resetKonamiCode() {
+        konamiCodeIndex = 0;
+        console.log('Resetting konami code');
+    }
+
+    document.addEventListener("keydown", function (event) {
+        if (event.keyCode === konamiCode[konamiCodeIndex]) {
+            konamiCodeIndex++;
+            if (konamiCodeIndex === konamiCode.length) {
+                alert("You have added 30 lives!");
+                resetKonamiCode();
+            }
+        } else {
+            alert('NOPE, TRY AGAIN!')
+            playAudio()
+        }
+    });
+
+    const video = document.getElementById('mortalKombatVideo');
+
+    video.autoplay = true;
+    video.muted = true;
+
+    function preventPausePlay() {
+        video.addEventListener('pause', function () {
+            video.play();
+        });
+    }
+
+    preventPausePlay();
+
+    function playAudio() {
+        const audio = document.getElementById('fatality');
+        if (audio) {
+            audio.play();
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>
