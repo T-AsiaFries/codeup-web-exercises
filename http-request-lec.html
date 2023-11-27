@@ -1,0 +1,243 @@
+<!--
+1. HTTP or Hypertext Transfer Protocol
+    * Is the foundation of data communication on the world wide web.
+    * It defines the rules for how messages (requests and responses) are formatted and transmitted between web browsers and web servers.
+    * It's the protocol that enables the retrieval of web pages and the exchange of data on the internet.
+    * For example, when a user wants to view a web page, their web browser (in this case the web browser is the client) sends an HTTP request to the server (which the server is the remote computer) hosting the desired content. The server then responds with an HTTP response, providing the requested data or indicating an error.
+
+Some common type of request (also called HTTP Methods) are
+    * GET
+        - Purpose: Is to retrieve data from the server
+        - Example: Fetching a webpage, retrieving data from a server
+    * POST
+        - Purpose: Is to submit data to be processed to a specified resource
+        - Example: Submitting a form, uploading a file.
+    * PUT
+        - Purpose: Is to update a resource or create a new resource if it doesn't exist
+        - Example: Updating a user's profile, uploading a resource to a specific URL
+    * PATCH
+        - Purpose: Is to apply partial modifications to a resource
+        - Example: Updating specific fields of an existing resource
+    * DELETE
+        - Purpose: Is to remove or delete
+        - Example: Removing a file, deleting a user account.
+
+2. What is an API
+    * API stands for "Application Programming Interface" and is a way of describing software design.
+    *  At the highest level an API is any application with a set of instruction for how programmers can interact with getting data.
+    * APIs can be implemented using HTTP as a communication protocol. They define endpoints (URLs) and rules for how data should be requested and sent.
+    * There are APIs for (weather, maps, stocks, books, sports, art, games, movies, etc...). Some are free, some are somewhat expensive and some are really expensive.
+    * Here is a good list of Free Apis (https://github.com/public-apis/public-apis)
+
+    - API Data
+    * An API will receive a scripted request and send a response. That data will generally be in one of two forms: XML or JSON.
+    * XML stands for "eXtensible Markup Language" and is the granddaddy of serialized data formats (itself based on HTML). XML is fat, ugly and cumbersome to parse. It is increasingly the less common of the two formats you'll encounter.
+        * XML looks like this:
+            <users>
+              <user id="23">
+                <name><![CDATA[Bob]]></name>
+              </user>
+              <user id="72">
+                <name><![CDATA[Tim]]></name>
+              </user>
+            </users>
+
+    * JSON or JavaScript Object Notation is structured data (i.e., arrays and object). JSON has become a universal standard for sending and receiving data across the web. It is light-weight, easy-to-read and quick to parse.
+    * JSON is based off the JavaScript Object syntax, and is just a long string of characters. One notable difference is that double quotes must always be used for keys and values.
+        * JSON looks like this:
+            {
+                "users": [{ "name": "Bob", "id": 23 }, { "name": "Tim", "id": 72 }],
+                "content": "This is a piece of content"
+            }
+
+3. What is AJAX or Asynchronous JavaScript and XML.
+    * AJAX is the concept of communicating with a server, sending or retrieving data, without refreshing the current webpage.
+    * AJAX uses HTTP to send requests to APIs. These requests can retrieve data in various formats, not just XML, despite the name.
+    * For example, back in the early internet day, whenever we are making a request to a page, the entire page had to refresh and reload. Whenever we change some type of data the entire page had to reload. Imagine we were on instagram's website and everytime we hit a like instead of it just turning blue and just incrementing, the entire page refreshed, and then it take you back to where you were, and it was incrementing. If you had to like again or de-like it would refresh again. You can imagine that was really annoying. So ajax came around for way for us to make request and not have our page refresh, it was a way for us to asynchronously go out and do some type of request and let the rest of our javascript run while request was happening.
+
+In simpler terms:
+    * HTTP is the protocol that enables communication on the web.
+    * API is a set of rules that allows different software to talk to each other, often implemented using HTTP.
+    * AJAX is a technique that uses JavaScript and HTTP to make dynamic requests to a server without reloading the entire web page. It often involves interacting with APIs to get or send data.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="#" id="searchForm">
+    <input type="text" id="searchBar" placeholder="Please enter a PokéName">
+    <input type="submit" id="searchButton" value="Search">
+</form>
+
+<div class="container"></div>
+
+<script>
+    // // BASIC FETCH REQUEST (INVOKES A PROMISE OBJECT)
+    // let something = fetch("https://pokeapi.co/api/v2/pokemon/charmander")
+    //     // console.log(something)
+    //     //     RESPONSE REPRESENTS THE RESPONSE WE GET BACK FROM THE API REQUEST aka PROMISE
+    //     .then(function (response) {
+    //         return (response.json())
+    //     })
+    //     // ^RETURN IS RETURNING THE JSON DATA INTO THE NEXT THEN FUNCTION BELOWv
+    //     .then(function (data) {
+    //         console.log(data)
+    //     })
+    //
+    // // EXAMPLE OF CALL BACK AND ARROW FUNCTIONS TO CLEAN UP CODE
+    // fetch("https://pokeapi.co/api/v2/pokemon/charmander")
+    //     .then(response => response.json())
+    //     .then(data => data)
+    //     .catch(error => console.log("Error" + error))
+    //     .finally(console.log("This will run no matter what!"))
+    //
+    // // EXAMPLE OF "response.ok" -> CHECKING TO SEE IF THE WEBPAGE IS GOOD 200 VS 404
+    // fetch("https://pokeapi.co/api/v2/pokemon/charmander")
+    //     .then(response => {
+    //         if (!response.ok) {
+    //             console.log("unsucessfull");
+    //         }
+    //         return response.json()
+    //         }
+    //     )
+    //     .then(data => console.log("At last, we have the JSON data we want: " + data))
+    //     .catch(error => {
+    //         console.log("ERROR!!!");
+    //         console.log("Error message: " + error.message);
+    //     })
+    //     .finally(() => console.log("This function always runs!"));
+
+    //     // SHOW ASYNC BEHAVIOR IN ACTION
+    //     console.log(1);
+    //
+    //     const options = {
+    //         method: "GET",
+    //         headers: { "Content-Type": "application/json" },
+    //     }
+    //
+    //     fetch("https://pokeapi.co/api/v2/pokemon/charmander", options)
+    //         .then(response => {
+    //             // console.log(2);
+    //             return (response.json())
+    //         })
+    //         .then(data => console.log(data))
+    //     console.log(3);
+    //
+    // //     EXAMPLE OF "promise.all"
+    //
+    //     const githubPromise = fetch('https://api.github.com/repositories');
+    //     const bitbucketPromise = fetch('https://api.bitbucket.org/2.0/repositories');
+    //
+    //     Promise.all([githubPromise, bitbucketPromise])
+    //         .then( response => {
+    //             // here data is an array of the resolved values from each promise
+    //             // we can now do something with both pieces of data
+    //             const [githubData, bitbucketData] = response;
+    //             console.log("Bitbucket data", bitbucketData);
+    //             console.log("Github data", githubData);
+    //         })
+    //         .catch( error => {
+    //             // handle errors
+    //             console.log("Error", error);
+    //         });
+    //
+    // //    "promise.all" TAKES TWO DIFFERENT PARAMETERS WHILE "promise.race" WILL ONLY TAKE ONE!
+    //
+    //     fetch('https://api.github.com/users')
+    //         .then(response => response.json())
+    //         .then(users => {
+    //             users.forEach( user => {
+    //                 // log each user's username (or login property)
+    //                 console.log(user.login);
+    //                 console.log(user.avatar_url);
+    //             })
+    //         })
+    //         .catch(error => console.error(error));
+
+
+    //////// To Do : For Rattata pokémon character, make an AJAX call and, console.log its height and weight.////////
+
+    // fetch("https://pokeapi.co/api/v2/pokemon/rattata")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         const weight = data.weight;
+    //         const height = data.height;
+    //         console.log("Weight:", weight)
+    //         console.log("Height:", height);
+    //         // .then(data => console.log(data.height, data.weight)) or
+    //         // .then(data => console.log(`This is the height: ${data.height}, This is the weight: ${data.weight}`))
+    //     })
+    //     .catch(error => console.error("Error", error))
+
+    //     API's RETURN A PROMISE. A PROMISE RETURNS A RESPONSE
+
+    // FOR EACH FUNCTION
+    function getGithubUsernames() {
+        return fetch('https://api.github.com/users')
+            .then(response => response.json())
+    }
+
+    // later on...
+
+    getGithubUsernames().then(users => {
+        users.forEach(userObj => {
+            // do something with each username
+            console.log(userObj.login);
+        });
+    }).catch(error => console.error(error));
+
+    //
+
+    function createPokemonElements (data) {
+        const paragraph = document.createElement('p')
+        paragraph.innerHTML = data.name;
+        let container = document.querySelector('.container')
+        container.appendChild(paragraph)
+
+        //     image
+        const image = document.createElement('img');
+        image.src = data.sprites.front_shiny;
+        container.appendChild(image);
+        image.style.height = "40vh"
+    }
+
+
+    let searchForm = document.querySelector("#searchForm");
+
+    searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let input = document.querySelector("#searchBar").value
+        // console.log(input)
+
+        fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
+            .then(response => response.json())
+            .then(data => createPokemonElements(data))
+            .catch(onFail)
+    })
+
+    // // console.log(data.name);
+    // const paragraph = document.createElement('p')
+    // paragraph.innerHTML = data.name;
+    // let container = document.querySelector('.container')
+    // container.appendChild(paragraph)
+    //
+    // //     image
+    // const image = document.createElement('img');
+    // image.src = data.sprites.front_shiny;
+    // container.appendChild(image);
+    // image.style.height = "40vh";
+    // })
+
+
+
+</script>
+</body>
+</html>
