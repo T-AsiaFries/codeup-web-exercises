@@ -30,19 +30,19 @@
 
     const restaurants = [
         {
-            name: "Texas Roadhouse",
-            longitude: -96.6386785645222,
-            latitude: 32.983899666581344
+            name: "The Kickin Crab",
+            longitude: -96.907822,
+            latitude: 32.981033
         },
         {
-            name: "McDonald's",
-            longitude: -96.8030806476694,
-            latitude: 32.77887142354196
+            name: "Tacos El Mamon",
+            longitude: -97.114288,
+            latitude: 32.644264
         },
         {
-            name: "Pizza Hut",
-            longitude: -96.77896140164239,
-            latitude: 32.80350262247961
+            name: "Gens Korean BBQ House",
+            longitude: -96.907793,
+            latitude: 32.981790
         }
     ]
 
@@ -54,22 +54,6 @@
         zoom: 15, // starting zoom
         center: [-96.80330059331894, 32.777946644194934] // [lng, lat]
     });
-
-
-    // geocode("308 S Akard St, Dallas, TX 75202", MAPBOX_API)
-    //     .then(coords => {
-    //         console.log(coords)
-    //         const pizzaMarker = new mapboxgl.Marker()
-    //         .setLngLat(coords)
-    //             .addTo(map)
-    //         map.setCenter(coords)
-    //         map.setZoom(18)
-    //         let pizzaPopup = new mapboxgl.Popup()
-    //             .setHTML("<p>Codeup Rocks!</p>")
-    //         pizzaMarker.setPopup(pizzaPopup)
-    //
-    //
-    //     })
 
 
     restaurants.forEach((restaurant, index) => {
@@ -88,7 +72,22 @@
         marker.setPopup(popup)
     })
 
-
+    // geocode("8125 N Academy Blvd" +
+    // "Colorado Springs, CO  80920" +
+    // "United States", MAPBOX_API)
+    //     .then(coords => {
+    //         console.log(coords)
+    //         const favMarker = new mapboxgl.Marker()
+    //         .setLngLat(coords)
+    //             .addTo(map)
+    //         map.setCenter(coords)
+    //         map.setZoom(18)
+    //         let favPopup = new mapboxgl.Popup()
+    //             .setHTML("<p>Urban Tandoor</p>")
+    //         favMarker.setPopup(favPopup)
+    //
+    //
+    //     })
 
 </script>
 </body>
