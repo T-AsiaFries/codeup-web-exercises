@@ -51,14 +51,13 @@
     </div>
 </div>
 
-
 <!-- MAPBOX CONTAINER-->
 <div id='map' style='width: 100%; height: 400px;'></div>
 
 <!-- KEYS/JS-->
 <script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script src="js/weather_map.js"></script>
-
 
 <!-- MAPBOX JS-->
 <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
@@ -70,6 +69,41 @@
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
         center: [-96.955963, 32.813499], // starting position [lng, lat]
         zoom: 11, // starting zoom
+    });
+
+    geocode("Irving, TX", MAPBOX_API).then( result => {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(12);
+    });
+
+    // IRVING MARKER
+    const marker = new mapboxgl.Marker({
+        color: "#017BFE",
+        draggable: true
+    }).setLngLat([-96.944322 ,32.830201 ])
+        .addTo(map);
+
+    // DRAG MARKER
+    marker.on('dragend', function () {
+        const markerCoordinates = marker.getLngLat();
+        fetchWeatherData(markerCoordinates);
+    });
+
+    // NEW MARKER WHEN MAP IS CLICKED
+    map.on('click', function (e) {
+        const clickedCoordinates = e.lngLat;
+        console.log(e)
+        const lat = e.lngLat.lat
+        const lng = e.lngLat.lng
+
+        const newMarker = new mapboxgl.Marker()
+            .setLngLat(clickedCoordinates)
+            .addTo(map)
+        fetchWeatherData(lng, lat);
+        const container = document.getElementById('forecast-container')
+        container.innerHTML = '';
+        marker.remove();
     });
 </script>
 
