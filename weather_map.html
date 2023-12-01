@@ -45,7 +45,7 @@
 <button id="sub" type="button">Find</button>
 
 <!-- 5 DAY FORECAST-->
-<div id="forecast-container">
+<div id="forecast-container" class="d-flex">
     <div id="forecast" class="row">
 
     </div>
@@ -56,8 +56,9 @@
 <div id='map' style='width: 100%; height: 400px;'></div>
 
 <!-- KEYS/JS-->
-<script src="js/weather_map.js"></script>
 <script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
+
 
 <!-- MAPBOX JS-->
 <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
@@ -67,8 +68,8 @@
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9, // starting zoom
+        center: [-96.955963, 32.813499], // starting position [lng, lat]
+        zoom: 11, // starting zoom
     });
 </script>
 
