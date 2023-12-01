@@ -32,3 +32,39 @@ label {
     height: 32px;
 }
 
+/* FORECAST CONTAINER ELEMENTS */
+div {
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+/* FORECAST CARD CONTAINER */
+#forecast-container {
+    height: 300px;
+}
+
+/* FORECAST CARDS */
+.forecast-card {
+    width: 260px;
+    height: 260px;
+    margin-left: 15px;
+}
+
+/* CONTENT INSIDE CARD */
+.list-group-item {
+    display: flex;
+    margin: 0;
+    margin-left: 0;
+    padding: 5px;
+}
+
+/* LIST STYLE */
+ul {
+    list-style: none;
+}
+
+/* CARD DATE/TEMP */
+
+.top {
+    margin-bottom: 0;
+}
