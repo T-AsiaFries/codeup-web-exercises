@@ -3,7 +3,6 @@ function fetchWeatherData(lng, lat) {
         .then(response => response.json())
         .then(data => {
             const forecastContainer = document.getElementById('forecast-container')
-            // data.list.forEach(item => {
             console.log(data)
             let day = data.list;
             for (let i = 0; i < day.length; i += 8) {
@@ -12,6 +11,7 @@ function fetchWeatherData(lng, lat) {
                 const date = new Date(weather.dt * 1000);
                 const formattedDate = formatDate(date);
                 const temperature = weather.main.temp;
+                const tempFahrenheit = tempChange(temperature);
                 const description = weather.weather[0].description;
                 const humidity = weather.main.humidity;
                 const wind = weather.wind.speed;
@@ -26,7 +26,7 @@ function fetchWeatherData(lng, lat) {
                     </div>
                      <div class="card-body">
                         <div>
-                            <p class="top">${temperature} °F</p>
+                            <p class="top">${tempFahrenheit.toFixed(2)} °F</p>
                             <img src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png" alt="Weather Icon" class="weather-icon">
                         </div>
                          <ul class="list-group list-group-flush">
@@ -48,7 +48,7 @@ function fetchWeatherData(lng, lat) {
 
 fetchWeatherData(-96.804112, 32.778842)
 
-// FUNCTION TO CHANGE THE FORMAT OF THE DATE
+// FUNCTION TO CHANGE THE FORMAT OF THE DATE TO YYYY-MM-DD
 function formatDate(date) {
     const options = {year: 'numeric', month: '2-digit', day: '2-digit'};
     const formattedDate = date.toLocaleDateString('en-US', options);
@@ -56,42 +56,29 @@ function formatDate(date) {
     return `${year}-${month}-${day}`;
 }
 
-// SEARCH BUTTON
-document.getElementById('sub').addEventListener('click', function () {
-    const searchInput = document.getElementById('search').value
-    console.log('Search Input:', searchInput);
-})
+// FUNCTION TO CHANGE THE TEMPERATURE FROM CELSIUS TO FAHRENHEIT
+function tempChange(celsius) {
+    const fahr = celsius * 9/5 + 32;
+    return fahr;
+}
 
-// UPDATE FORECAST FUNCTION
-// function updateForecast(data) {
-//     const forecastContainer = document.getElementById('forecast-container');
-//     forecastContainer.innerHTML = ``;
-// }
+// FIND BUTTON FUNCTION THAT USES GEOCODE TO GET THE LOCATION FOR THE SEARCHED INPUT
+document.getElementById('find').addEventListener('click', function () {
+    const searchInput = document.getElementById('search').value;
+    geocode(searchInput, MAPBOX_API).then(result => {
+        map.setCenter(result);
+        map.setZoom(12);
+        marker.remove();
+        // ADDING A MARKER FOR THE NEW SEARCHED INPUT
+        const newMarker = new mapboxgl.Marker({
+            color: "#017BFE",
+            draggable: true
+        }).setLngLat(result)
+            .addTo(map);
+        markerCoordinates = newMarker.getLngLat();
 
-// FUNCTION TO GET WEATHER DATA FROM API
-// function fetchWeatherData(lng, lat) {
-//     // const { lng, lat } = coordinates;
-//
-//     fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${WEATHER_MAP_API}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             updateForecast(data);
-//         })
-//         .catch(error => console.error('Error fetching forecast:', error));
-// }
-
-
-// function getCoordinatesByLocation(locationName) {
-//     return fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${locationName}.json?access_token=${MAPBOX_API}`)
-//         .then(response => response.json())
-//         .then(data => {
-//             const features = data.features;
-//             if (features.length > 0) {
-//                 const coordinates = features[0].center;
-//                 return { latitude: coordinates[1], longitude: coordinates[0] };
-//             } else {
-//                 throw new Error('Location not found');
-//             }
-//         });
-//     console.log(getCoordinatesByLocation())
-// }
+        fetchWeatherData(markerCoordinates.lng, markerCoordinates.lat);
+        const container = document.getElementById('forecast-container');
+        container.innerHTML = '';
+    });
+});
