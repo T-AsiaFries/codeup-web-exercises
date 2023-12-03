@@ -57,8 +57,8 @@ function formatDate(date) {
 }
 
 // FUNCTION TO CHANGE THE TEMPERATURE FROM CELSIUS TO FAHRENHEIT
-function tempChange(celsius) {
-    const fahr = celsius * 9/5 + 32;
+function tempChange(kelvin) {
+    const fahr = (kelvin - 273.15) * 9/5 + 32;
     return fahr;
 }
 
