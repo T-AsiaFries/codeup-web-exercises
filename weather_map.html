@@ -65,10 +65,10 @@
 <script>
     mapboxgl.accessToken = MAPBOX_API
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v12', // style URL
-        center: [-96.955963, 32.813499], // starting position [lng, lat]
-        zoom: 11, // starting zoom
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [-96.955963, 32.813499],
+        zoom: 11,
     });
 
     geocode("Irving, TX", MAPBOX_API).then( result => {
