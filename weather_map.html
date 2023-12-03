@@ -42,7 +42,7 @@
 <!-- SEARCH BAR-->
 <label for="search">Place</label>
 <input type="text" id="search">
-<button id="sub" type="button">Find</button>
+<button id="find" type="button">Find</button>
 
 <!-- 5 DAY FORECAST-->
 <div id="forecast-container" class="d-flex">
@@ -77,7 +77,7 @@
         map.setZoom(12);
     });
 
-    // IRVING MARKER
+    // IRVING INITIAL MARKER
     const marker = new mapboxgl.Marker({
         color: "#017BFE",
         draggable: true
@@ -87,7 +87,9 @@
     // DRAG MARKER
     marker.on('dragend', function () {
         const markerCoordinates = marker.getLngLat();
-        fetchWeatherData(markerCoordinates);
+        fetchWeatherData(markerCoordinates.lng, markerCoordinates.lat);
+        const container = document.getElementById('forecast-container');
+        container.innerHTML = '';
     });
 
     // NEW MARKER WHEN MAP IS CLICKED
