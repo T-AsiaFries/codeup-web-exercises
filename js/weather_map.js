@@ -1,9 +1,10 @@
+// FUNCTION THAT MAKES A REQUEST TO WEATHER MAP API TO GET 5 DAY FORECAST DATA AND APPEND CARDS TO MY FORECAST DIV
 function fetchWeatherData(lng, lat) {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lng}&appid=${WEATHER_MAP_API}`)
         .then(response => response.json())
         .then(data => {
             const forecastContainer = document.getElementById('forecast-container')
-            console.log(data)
+            // console.log(data)
             let day = data.list;
             for (let i = 0; i < day.length; i += 8) {
                 let weather = day[i];
