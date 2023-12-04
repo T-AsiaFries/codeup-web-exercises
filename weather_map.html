@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Irving Weather Map</title>
-<!--    MAPBOX CSS-->
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
-<!--    BOOTSTRAP-->
+    <!--    MAPBOX CSS-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet'/>
+    <!--    BOOTSTRAP CSS-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
 ">
-<!--    CSS-->
+    <!--    CSS-->
     <link rel="stylesheet" href="css/weather_map.css">
 </head>
 <body>
@@ -17,7 +17,8 @@
 <nav class="navbar navbar-expand-lg" style="background-color: #017BFE">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Weather App</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarText">
@@ -33,7 +34,7 @@
                 </li>
             </ul>
             <span class="navbar-text">
-        Current City: Irving
+        Current city: Irving
       </span>
         </div>
     </div>
@@ -47,7 +48,7 @@
 <!-- 5 DAY FORECAST-->
 <div id="forecast-container" class="d-flex">
     <div id="forecast" class="row">
-
+<!--(APPENDED CARDS GO HERE) -->
     </div>
 </div>
 
@@ -63,6 +64,7 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
 
 <script>
+    <!-- MAP-->
     mapboxgl.accessToken = MAPBOX_API
     const map = new mapboxgl.Map({
         container: 'map',
@@ -71,7 +73,7 @@
         zoom: 11,
     });
 
-    geocode("Irving, TX", MAPBOX_API).then( result => {
+    geocode("Irving, TX", MAPBOX_API).then(result => {
         console.log(result);
         map.setCenter(result);
         map.setZoom(12);
@@ -81,7 +83,7 @@
     const marker = new mapboxgl.Marker({
         color: "#017BFE",
         draggable: true
-    }).setLngLat([-96.944322 ,32.830201 ])
+    }).setLngLat([-96.944322, 32.830201])
         .addTo(map);
 
     // DRAG MARKER
@@ -98,6 +100,7 @@
         console.log(e)
         const lat = e.lngLat.lat
         const lng = e.lngLat.lng
+        marker.remove()
 
         const newMarker = new mapboxgl.Marker()
             .setLngLat(clickedCoordinates)
