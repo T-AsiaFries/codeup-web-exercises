@@ -1,0 +1,58 @@
+[
+    {
+        "title": "Hammer",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 250
+    }, {
+        "title": "Drill",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 300
+    }, {
+        "title": "Mower",
+        "quantity": 5,
+        "categories": [
+            "tool",
+            "powered",
+            "gas",
+            "outdoor"
+        ],
+        "price": 200
+    }, {
+        "title": "Screwdrivers",
+        "quantity": 25,
+        "categories": [
+            "tool"
+        ],
+        "price": 500
+    }, {
+        "title": "Ladder",
+        "quantity": 25,
+        "categories": [
+            "tool",
+            "outdoor"
+        ],
+        "price": 2500
+    }, {
+        "title": "Hacksaw",
+        "quantity": 15,
+        "categories": [
+            "tool",
+            "powered"
+        ],
+        "price": 225
+    }, {
+        "title": "Pliers",
+        "quantity": 20,
+        "categories": [
+            "tool"
+        ],
+        "price": 650
+    }
+]
