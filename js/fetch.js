@@ -1,30 +1,24 @@
-function lastCommit(events) {
-    const pushEvents = events.filter(event => event.type === 'PushEvent');
-    if (pushEvents.length === 0) {
-       return ('n/a');
-    }
-    const lastCommitDate = pushEvents[0].created_at;
-    return lastCommitDate;
+function getLastCommit(username, token) {
+    return fetch(`https://api.github.com/users/${username}/events`, {
+        headers: {
+            'Authorization': `${token}`
+        }
+    })
+        .then(response => response.json());
 }
 
-const octokit = new Octokit({
-    auth: `token ${GITHUB_API_KEY}`,
-});
-
-const username = 'github-username';
-
-await octokit.request('GET /users/{username}/events/public', {
-    username: 'USERNAME',
-    headers: {
-        'X-GitHub-Api-Version': '2022-11-28',
-    },
-})
-    .then(response => {
-        const events = response.data;
-        const lastCommitDate = lastCommit(events);
-        console.log(`Last commit date for ${username}: ${lastCommitDate}`);
+getLastCommit('t-asiafries', GITHUB_API_KEY)
+    .then(data => {
+        let commitEvents = data.filter(event => event.type === "PushEvent");
+        if (commitEvents.length > 0) {
+            return new Date(commitEvents[0].created_at);
+        } else {
+            throw new Error('No commit events found for the specified user.');
+        }
+    })
+    .then(lastCommitDate => {
+        console.log('Last Commit Date:', lastCommitDate);
     })
     .catch(error => {
         console.error(error.message);
     });
-
