@@ -13,7 +13,7 @@ getLastCommit('t-asiafries', GITHUB_API_KEY)
         if (commitEvents.length > 0) {
             return new Date(commitEvents[0].created_at);
         } else {
-            throw new Error('No commit events found for the specified user.');
+            console.error('No commit events found for the specified user.');
         }
     })
     .then(lastCommitDate => {
